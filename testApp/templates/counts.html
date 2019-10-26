@@ -1,0 +1,38 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+
+{% extends 'base.html' %}
+
+{% block new_content %}
+<h2> this is the counts page </h2>
+<h3> hi </h3>
+</p> what </p>
+
+{% block more_content %}
+<p> table of visitor stats </p>
+<table>
+ <tbody>
+        <tr>
+            <td>visitor</td>
+            <td>date visited</td>
+            <td>time visited</td>
+        </tr>
+        {% for v in visitors%}
+          <tr>
+              <td> {{v.0}} </td>
+              <td> {{v.1}} </td>
+              <td> {{v.2}} </td>
+          </tr>
+          {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+{% endblock %}
+
+
+
